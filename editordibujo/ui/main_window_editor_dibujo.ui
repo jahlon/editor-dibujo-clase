@@ -11,9 +11,227 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Editor de dibujo</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="container">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="tool_container">
+      <property name="maximumSize">
+       <size>
+        <width>70</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0" columnminimumwidth="0,0,0,0">
+       <item row="3" column="2">
+        <widget class="QPushButton" name="pbutton_rect">
+         <property name="toolTip">
+          <string>Dibujar rectángulo</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/img/rectangle.png</normaloff>:/images/img/rectangle.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="9" column="2">
+        <widget class="QLabel" name="label_color_linea">
+         <property name="toolTip">
+          <string>Color de línea</string>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pbutton_seleccionar">
+         <property name="toolTip">
+          <string>Seleccionar</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/img/cursor.png</normaloff>:/images/img/cursor.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pbutton_linea">
+         <property name="toolTip">
+          <string>Dibujar linea</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/img/linea.png</normaloff>:/images/img/linea.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QPushButton" name="pbutton_eliminar">
+         <property name="toolTip">
+          <string>Eliminar figura seleccionada</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/img/delete.png</normaloff>:/images/img/delete.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QLabel" name="label_color_fondo">
+         <property name="toolTip">
+          <string>Color de fondo</string>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QPushButton" name="pbutton_ovalo">
+         <property name="toolTip">
+          <string>Dibujar óvalo</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="resources.qrc">
+           <normaloff>:/images/img/circle.png</normaloff>:/images/img/circle.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="QSpinBox" name="spin_ancho_linea">
+         <property name="toolTip">
+          <string>Ancho de línea</string>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="11" column="2">
+        <widget class="QComboBox" name="combo_tipo_linea">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/img/linea.png</normaloff>:/images/img/linea.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/img/dashed.png</normaloff>:/images/img/dashed.png</iconset>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/img/puntos.png</normaloff>:/images/img/puntos.png</iconset>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="canvas_container">
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -23,9 +241,47 @@
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="accion_guardar"/>
+    <addaction name="accion_abrir"/>
+    <addaction name="separator"/>
+    <addaction name="accion_salir"/>
+   </widget>
+   <addaction name="menuArchivo"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="accion_guardar">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/img/save.png</normaloff>:/images/img/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar dibujo</string>
+   </property>
+  </action>
+  <action name="accion_abrir">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/img/open.png</normaloff>:/images/img/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir dibujo</string>
+   </property>
+  </action>
+  <action name="accion_salir">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/img/exit.png</normaloff>:/images/img/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
