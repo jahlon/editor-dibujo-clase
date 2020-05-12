@@ -13,4 +13,7 @@
     <file>img/save.png</file>
     <file>img/triangle.png</file>
   </qresource>
+  <qresource prefix="ui">
+    <file>main_window_editor_dibujo.ui</file>
+  </qresource>
 </RCC>
