@@ -30,8 +30,14 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <item>
+    <item alignment="Qt::AlignTop">
      <widget class="QFrame" name="tool_container">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="maximumSize">
        <size>
         <width>70</width>
@@ -44,7 +50,10 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0,0" columnminimumwidth="0,0,0,0">
+      <layout class="QGridLayout" name="gridLayout" columnstretch="0,0,0" columnminimumwidth="0,0,0">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
        <item row="3" column="2">
         <widget class="QPushButton" name="pbutton_rect">
          <property name="toolTip">
@@ -57,6 +66,12 @@
           <iconset resource="resources.qrc">
            <normaloff>:/images/img/rectangle.png</normaloff>:/images/img/rectangle.png</iconset>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="7" column="2">
@@ -74,6 +89,12 @@
        </item>
        <item row="9" column="2">
         <widget class="QLabel" name="label_color_linea">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>29</height>
+          </size>
+         </property>
          <property name="toolTip">
           <string>Color de línea</string>
          </property>
@@ -100,6 +121,15 @@
           <iconset resource="resources.qrc">
            <normaloff>:/images/img/cursor.png</normaloff>:/images/img/cursor.png</iconset>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="2" column="2">
@@ -114,6 +144,12 @@
           <iconset resource="resources.qrc">
            <normaloff>:/images/img/linea.png</normaloff>:/images/img/linea.png</iconset>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="6" column="2">
@@ -132,6 +168,12 @@
        </item>
        <item row="8" column="2">
         <widget class="QLabel" name="label_color_fondo">
+         <property name="minimumSize">
+          <size>
+           <width>28</width>
+           <height>29</height>
+          </size>
+         </property>
          <property name="toolTip">
           <string>Color de fondo</string>
          </property>
@@ -158,6 +200,12 @@
           <iconset resource="resources.qrc">
            <normaloff>:/images/img/circle.png</normaloff>:/images/img/circle.png</iconset>
          </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="10" column="2">
@@ -177,6 +225,9 @@
         <spacer name="horizontalSpacer">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -222,13 +273,29 @@
     </item>
     <item>
      <widget class="QFrame" name="canvas_container">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
       <property name="frameShape">
        <enum>QFrame::Panel</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Sunken</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout"/>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+      </layout>
      </widget>
     </item>
    </layout>
@@ -285,4 +352,7 @@
   <include location="resources.qrc"/>
  </resources>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>
